@@ -1,0 +1,5 @@
+python - m flask run
+
+python - m flask db init
+python db migrate
+python db upgrade
