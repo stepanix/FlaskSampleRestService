@@ -1,4 +1,5 @@
 
+
 from app.domain.models.product import ProductModel
 from app.domain.schemas.product_schema import product_schema
 from app.repositories.product_repository import ProductRepository
@@ -14,4 +15,9 @@ class ProductService(object):
         result = product_schema.dump(product_created)
         return result
     
+    def get(self, id):
+        repository = ProductRepository()        
+        product_retrieved = repository.get(ProductModel, id)
+        result = product_schema.dump(product_retrieved)
+        return result
     

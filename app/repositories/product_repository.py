@@ -8,3 +8,9 @@ class ProductRepository(object):
         db.session.add(entity)
         db.session.commit()
         return entity
+    
+    def get(self, entity, id):
+        result = db.session.query(entity).get(id)
+        return result
+    
+    
