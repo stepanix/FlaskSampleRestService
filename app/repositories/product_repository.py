@@ -1,22 +1,28 @@
 from app import db
 
-class ProductRepository(object):         
+class ProductRepository(object):    
+   
 
-    def insert(self, entity):
-        db.session.add(entity)
+    def insert(self, model):
+        db.session.add(model)
         db.session.commit()
-        return entity
+        return model
     
-    def get(self, entity, id):
-        result = db.session.query(entity).get(id)
+    def get(self, model, id):
+        result = db.session.query(model).get(id)
         return result
     
-    def update(self, entity, payload, id):
-        product_to_update = db.session.query(entity).get(id)
+    def update(self, model, payload, id):
+        product_to_update = db.session.query(model).get(id)
         product_to_update.price = payload['price']
         product_to_update.title = payload['title']
         product_to_update.description = payload['description']    
         db.session.commit()
         return product_to_update
+    
+    def delete(self, model, id):
+        product_to_delete = db.session.query(model).get(id)
+        db.session.delete(product_to_delete)
+        return "delete successful"
     
     

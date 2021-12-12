@@ -2,7 +2,7 @@
 from flask_marshmallow import Marshmallow
 
 import app
-from app.domain.models.product import ProductModel
+from app.domain.models.product_model import ProductModel
 
 
 ma = Marshmallow(app)

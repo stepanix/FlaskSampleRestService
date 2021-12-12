@@ -17,8 +17,15 @@ def get(id):
 
 @app.route("/product/<int:id>", methods=["PUT"])
 def update(id):
-    service = ProductService()
     payload = request.json
+    service = ProductService()    
     result = service.update(payload,id)
+    return make_response(jsonify(result))
+
+
+@app.route("/product/<int:id>", methods=["DELETE"])
+def delete(id):
+    service = ProductService()    
+    result = service.delete(id)
     return make_response(jsonify(result))
     
