@@ -10,7 +10,6 @@ app.config.from_object(Config)
 # create the application database instance
 db = SQLAlchemy(app)
 migrate = Migrate(app, db)
-
 from app.domain.models import product_model, cart_model
 from app.routes import product_route
 

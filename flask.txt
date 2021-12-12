@@ -1,5 +1,5 @@
-python - m flask run
+python -m flask run
 
-python - m flask db init
-python db migrate
-python db upgrade
+python3 -m flask db init
+python3 db migrate
+python3 db upgrade

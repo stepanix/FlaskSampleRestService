@@ -1,5 +1,3 @@
-
-
 from app.domain.models.product_model import ProductModel
 from app.domain.schemas.product_schema import product_schema
 from app.repositories.product_repository import ProductRepository
