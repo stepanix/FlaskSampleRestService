@@ -13,5 +13,5 @@ class Config(object):
     SECRET_KEY = environ.get('SECRET_KEY')
 
     # sqlalchemy
-    SQLALCHEMY_DATABASE_URI = "postgresql://postgres:Test!2345@localhost:5432/reduxcart" # if you do not create an environment file then it will create a sqlite database
+    SQLALCHEMY_DATABASE_URI = "postgresql://postgres:qfalinc5@192.168.10.234:5432/reduxcartdb" # if you do not create an environment file then it will create a sqlite database
     SQLALCHEMY_TRACK_MODIFICATIONS = False

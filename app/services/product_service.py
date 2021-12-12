@@ -1,5 +1,5 @@
 
-from app.domain.models.product import ProductModel
+from app.domain.models.product_models import ProductModel
 from app.domain.schemas.product_schema import product_schema
 from app.repositories.product_repository import ProductRepository
 
