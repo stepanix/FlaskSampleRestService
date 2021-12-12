@@ -21,3 +21,9 @@ class ProductService(object):
         result = product_schema.dump(product_retrieved)
         return result
     
+    def update(self, payload, id):
+        repository = ProductRepository()
+        product_updated = repository.update(ProductModel, payload, id)
+        result = product_schema.dump(product_updated)
+        return result
+    

@@ -14,4 +14,11 @@ def get(id):
     service = ProductService()
     result = service.get(id)
     return make_response(jsonify(result))
+
+@app.route("/product/<int:id>", methods=["PUT"])
+def update(id):
+    service = ProductService()
+    payload = request.json
+    result = service.update(payload,id)
+    return make_response(jsonify(result))
     
